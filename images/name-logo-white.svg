@@ -1,0 +1,9 @@
+<svg width="120" height="100" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- J and H Logo -->
+  <path 
+    d="M150 50C150 50 150 300 150 300C150 350 100 350 100 300V200" 
+    stroke="white" stroke-width="20" />
+  <path 
+    d="M150 200H300M300 50V300M300 200H350" 
+    stroke="white" stroke-width="20" />
+</svg>
