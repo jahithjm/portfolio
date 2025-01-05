@@ -13,38 +13,89 @@ const contactForm = document.querySelector('.contact')
 const sendButton = document.querySelector('.submit-btn')
 const mainSection = document.querySelector('.main-section')
 
-//Sun and Moon icon document selector
+// Theme management
 const icon = document.getElementById("icon")
+const contact_section = document.querySelector(".contact-section")
+const labels = Array.from(contact_section.querySelectorAll(".label"))
 
-//form label selection
-var contact_section =  document.querySelector(".contact-section")
-var label1= contact_section.querySelector(".label1")
-var label2= contact_section.querySelector(".label2")
-var label3= contact_section.querySelector(".label3")
+// Get system preference
+const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
 
+// Get saved theme from localStorage or use system preference
+let currentTheme = localStorage.getItem('theme') || 'system'
 
-//when icon is clicked theme is toggled
-icon.onclick = function () {
-  document.body.classList.toggle("dark-theme")
+const themeButtons = document.querySelectorAll('.theme-btn')
 
-  //if theme is dark then sun icon will be displayed
-  if (document.body.classList.contains("dark-theme")) {
-      icon.src = "images/sun.png"
-  }
-  //else moon icon will by default be displayed
-  else {
-      icon.src = "images/moon.png"
-  }
-  //if theme is dark then form label is white else will remain black
-  label1.style.color="white"
-  label2.style.color="white"
-  label3.style.color="white"
+// Update icon based on theme
+function updateIcon(theme) {
+  const isDark = theme === 'dark' || (theme === 'system' && systemPrefersDark);
+  icon.style.filter = isDark 
+    ? "var(--moon-filter)"  // Darker moon in dark mode
+    : "invert(0%)";         // Black moon in light mode
 }
+
+// Update active button state
+function updateActiveButton(theme) {
+  themeButtons.forEach(button => {
+    button.classList.remove('active')
+    if (button.classList.contains(theme)) {
+      button.classList.add('active')
+    }
+  })
+}
+
+// Apply theme to document
+function applyTheme(theme) {
+  // Set data-theme attribute
+  document.documentElement.setAttribute('data-theme', theme)
+  
+  // Update labels
+  const isDark = theme === 'dark' || (theme === 'system' && systemPrefersDark)
+  labels.forEach(label => {
+    label.style.color = isDark ? "white" : "var(--dark)"
+  })
+  
+  // Update icon and active button
+  updateIcon(theme)
+  updateActiveButton(theme)
+  
+  // Save to localStorage
+  localStorage.setItem('theme', theme)
+}
+
+// Theme button click handler
+themeButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const theme = button.classList.contains('light') ? 'light' :
+                 button.classList.contains('dark') ? 'dark' : 'system'
+    currentTheme = theme
+    applyTheme(theme)
+  })
+})
+
+// Theme toggle handler
+icon.onclick = function () {
+  // Cycle through themes: light -> dark -> system
+  currentTheme = 
+    currentTheme === 'light' ? 'dark' :
+    currentTheme === 'dark' ? 'system' : 'light'
+  
+  applyTheme(currentTheme)
+}
+
+// Initialize theme on page load
+applyTheme(localStorage.getItem('theme') || 'system')
+
+// Watch for system preference changes
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+  if (currentTheme === 'system') {
+    applyTheme('system')
+  }
+})
 
 aboutMeBtn.addEventListener('click', () => {
   aboutSection.classList.add('active')
   overlay.classList.add('active')
-  navbar.classList.add('hidden')
   navbar.classList.add('hidden')
   socialIcons.classList.add('hidden')
   disableScroll()

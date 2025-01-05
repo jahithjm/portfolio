@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="./images/name-logo-favicon.svg" type="image/gif" sizes="16x16" />
+    <link rel="stylesheet" href="floating-button.css" />
+    <link rel="icon" href="images/name-logo-white.svg" type="image/gif" sizes="16x16" />
 
     <!-- Fontawesome -->
     <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet" />
@@ -27,13 +28,26 @@
         <nav class="navbar">
           <div class="logo">
             <a href="/">
-              <img src="./images/name-logo-white.svg" alt="logo" />
+              <img src="images/name-logo-white.svg" alt="logo" />
             </a>
           </div>
           <div class="nav-links">
-            <!-- Theme toggle icons -->
-            <div class="theme-toggler" style="display:none">
-              <img src="images/moon.png" alt="Dark theme toggle" id="icon">
+            <!-- Theme controls -->
+            <div class="theme-controls">
+              <div class="theme-buttons">
+                <button class="theme-btn light" title="Light Theme">
+                  <i class="fas fa-sun"></i>
+                </button>
+                <button class="theme-btn dark" title="Dark Theme">
+                  <i class="fas fa-moon"></i>
+                </button>
+                <button class="theme-btn system" title="System Theme">
+                  <i class="fas fa-desktop"></i>
+                </button>
+              </div>
+              <div class="theme-toggler">
+                <img src="images/moon.png" alt="Theme toggle" id="icon">
+              </div>
             </div>
             <div class="phone-icon" style="display:none">
               <a href="https://topmate.io/anuragsingh" target="_blank"><img src="./images/phone.svg" alt="phone icon" draggable="false" /></a>
@@ -53,12 +67,12 @@
             </div>
           </div>
           <div class="name-logo">
-            <img src="/images/name-logo.svg" alt="name logo" />
+            <img src="images/name-logo.svg" alt="name logo" />
           </div>
         </div>
         <div class="about-section">
           <div class="x-icon">
-            <img src="./images/x.svg" alt="x icon" draggable="false" />
+            <img src="images/x.svg" alt="x icon" draggable="false" />
           </div>
           <div class="about-me">
             <div class="about-me-text">
@@ -72,13 +86,12 @@
 
               <ul class="about-me-detail">
                 <li>#javascript</li>
-                <li>#angular.js</li>
+                <li>#angular</li>
                 <li>#laravel</li>
                 <li>#php</li>
                 <li>#node.js</li>
                 <li>#express.js</li>
                 <li>#mysql</li>                              
-                <li>#postmanApi</li>
                 <li>#html</li>
                 <li>#css</li>
                 <li>#sass</li>
@@ -99,7 +112,7 @@
           </div>
           <div class="illustration">
             <div class="coder-img-container">
-              <img class="coder-img" src="/images/coder.svg" alt="coder image" draggable="false" />
+              <img class="coder-img" src="images/coder.svg" alt="coder image" draggable="false" />
             </div>
           </div>
         </div>
@@ -121,7 +134,7 @@
         </ul>
         <div class="latest-works-link">Latest Works</div>
 
-        <img class="down-arrow" title="To my works" src="/images/right-arrow.svg" alt="down arrow" />
+        <img class="down-arrow" title="To my works" src="images/right-arrow.svg" alt="down arrow" />
         <div class="latest-works-arrow" ></div>
       </div>
       <div id="wrapper-canvas"></div>
@@ -137,74 +150,67 @@
       <div class="project project0">
         <div class="project-img">
           <div class="project-img-wrapper">
-            
-              <img src="/images/harigurus.webp" alt="project image" draggable="false" />
-            
-            <a href="https://github.com/jahithjm/House-Rental-Plaform.git" target="_blank">
-              <span class="visit-site">Harigurus
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="feather feather-external-link">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </span>
-            </a>
+        
+          <img src="images/photo1.png" alt="project image" draggable="false" />
+        
+        <a href="https://github.com/jahithjm/House-Rental-Plaform.git" target="_blank">
+          <span class="visit-site">EHRS
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-external-link">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+          <polyline points="15 3 21 3 21 9"></polyline>
+          <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </span>
+        </a>
           </div>
         </div>
         <div class="project-details">
-          <h3>EASY HOUSE RENDAL PLATFORM</h3>
-          <span>(RENDAL SERVICE)</span>
+          <h3>EASY HOUSE RENTAL PLATFORM</h3>
+          <span>(RENTAL SERVICE)</span>
           <p>
-            HariGurus is a one-stop-shop for all Hindu religious, customs and traditional requirements. Built the complete site from scratch.
+        A modern, responsive platform for property rentals. It features searchable listings with filters, booking calendars, and detailed property details. Tenants can explore and contact landlords easily. Landlords can manage properties and track bookings seamlessly.
           </p>
-
           <ul>
-            <li>#html</li>
-            <li>#css</li>
-            <li>#javaScript</li>
-            <li>#php</li>
-            <li>#mysql</li>
-            <li>#figma (for UI/UX)</li>
-            
+        <li>#html</li>
+        <li>#css</li>
+        <li>#javaScript</li>
+        <li>#php</li>
+        <li>#mysql</li>
+        <li>#figma (for UI/UX)</li>
           </ul>
         </div> 
-        <!-- // link for endpoint -->
-        <a class="circle-dot" href="" target="_blank"></a>
+        <a class="circle-dot" href="https://github.com/jahithjm/House-Rental-Plaform.git" target="_blank"></a>
         <div class="circle-extension"></div>
       </div>
+      <div class="vertical-line"></div>
+      
       <div class="project project1">
         <div class="project-details">
-          <h3>EazyGrad</h3>
-          <span>(EdTech Startup)</span>
+          <h3>E-commerce website</h3>
+          <span>(Sample site)</span>
           <p>
-            Being a lead developer, revamped the site to a highly responsive,
-            and interactive website. Created new features and pages. Worked as a
-            team with product manager and ux designer.
+            A responsive practice project showcasing an online shopping platform. Features include product listings, search filters, a mock checkout process, and basic user account management. Designed to enhance skills in building functional and visually appealing web applications.
           </p>
 
           <ul>
-            <li>#node.js</li>
-            <li>#express.js</li>
-            <li>#mongoDB</li>
-            <li>#mongoDBAtlas</li>
-            <li>#ejs</li>
-            <li>#swiper.js</li>
+            <li>#angular</li>
+            <li>#angular Material</li>
+            <li>#tailwindCss</li>
             <li>#html</li>
             <li>#css</li>
             <li>#javascript</li>
-            <li>#lighthouse</li>
             <li>#figma</li>
           </ul>
         </div>
         <div class="project-img">
           <div class="project-img-wrapper">
-            <a href="https://eazygrad.com/" target="_blank">
-              <img src="/images/eazygrad.webp" alt="project image" draggable="false" />
+            <a href="https://github.com/jahithjm/Angular19.git" target="_blank">
+              <img src="images/" alt="project image" draggable="false" />
             </a>
-            <a href="" title="To my works" target="_blank">
-              <span class="visit-site">EazyGrad
+            <a href="https://github.com/jahithjm/Angular19.git" title="To my works" target="_blank">
+              <span class="visit-site">E-commerce
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                   class="feather feather-external-link">
@@ -219,213 +225,8 @@
         <a class="circle-dot" href="" title="To my works" target="_blank"> </a>
         <div class="circle-extension"></div>
       </div>
-      <div class="project project2">
-        <div class="project-img">
-          <div class="project-img-wrapper">
-            <a href="https://webdevenglish.com/" target="_blank">
-              <img src="/images/web-dev-english.webp" alt="project image" draggable="false" />
-            </a>
-            <a href="" title="To my works" target="_blank">
-              <span class="visit-site">Web Dev English
-                <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="feather feather-external-link">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="project-details">
-          <h3>Web Dev English</h3>
-          <span>(Coaching and Consulting)</span>
-          <p>
-            US-based English Coach's website for guiding techies. Improved
-            existing look and added new features and sections.
-          </p>
-
-          <ul>
-            <li>#wordpress</li>
-            <li>#elementor</li>
-            <li>#html</li>
-            <li>#css</li>
-            <li>#javascript</li>
-            <li>#figma</li>
-          </ul>
-        </div>
-        <a class="circle-dot" href="https://webdevenglish.com/" target="_blank"></a>
-        <div class="circle-extension"></div>
-      </div>
-      <div class="project project3">
-        <div class="project-details">
-          <h3>Money Arjan Solutions</h3>
-          <span>(Software Development Agency)</span>
-          <p>
-            Designed and developed the site from scratch. Used a combo of themes
-            and Figma to get the best results. Integrated contact form in the
-            website using Netlify.
-          </p>
-
-          <ul>
-            <li>#html</li>
-            <li>#css</li>
-            <li>#bootstrap</li>
-            <li>#netlify</li>
-            <li>#figma</li>
-          </ul>
-        </div>
-        <div class="project-img">
-          <div class="project-img-wrapper">
-            <a href="https://money-arjan.netlify.app/" target="_blank">
-              <img src="/images/money-arjan.webp" alt="project image" draggable="false" />
-            </a>
-
-            <a href="https://money-arjan.netlify.app/" title="To my works" target="_blank">
-              <span class="visit-site">Money Arjan
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="feather feather-external-link">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </span>
-            </a>
-          </div>
-        </div>
-        <a class="circle-dot" href="https://money-arjan.netlify.app/" target="_blank"></a>
-        <div class="circle-extension"></div>
-      </div>
-      <div class="project project4">
-        <div class="project-img">
-          <div class="project-img-wrapper">
-            <a href="https://digi-drive.netlify.app/" target="_blank">
-              <img src="/images/pioneer-digital.webp" alt="project image" draggable="false" />
-            </a>
-            <a href="https://digi-drive.netlify.app/" title="To my works" target="_blank">
-              <span class="visit-site">Pioneer Digital
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="feather feather-external-link">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="project-details">
-          <h3>Pioneer Digital</h3>
-          <span>(Digital Marketing Agency)</span>
-          <p>
-            One of the featured site while working with TheBrandWick.com
-            (agency). Worked as a frontend developer to make the site
-            user-interactive and responsive.
-          </p>
-
-          <ul>
-            <li>#javascript</li>
-            <li>#bootstrap</li>
-            <li>#css</li>
-            <li>#sass</li>
-            <li>#html</li>
-            <li>#figma</li>
-          </ul>
-        </div>
-        <a class="circle-dot" title="To my works" href="https://digi-drive.netlify.app/" target="_blank"></a>
-        <div class="circle-extension"></div>
-      </div>
-      <div class="project project5">
-        <div class="project-details">
-          <h3>Track My Expense</h3>
-          <span>(Finance)</span>
-          <p>
-            Initially, made this WebApp to track my monthly expenditure.
-            Currently, with 10+ user base, I'm continuously working on improving
-            it following the feedback.
-          </p>
-          <ul>
-            <li>#node.js</li>
-            <li>#express.js</li>
-            <li>#mongoDB</li>
-            <li>#mongoAtlas</li>
-            <li>#ejs</li>
-            <li>#html</li>
-            <li>#css</li>
-            <li>#javascript</li>
-            <li>#restAPI</li>
-            <li>#passport</li>
-            <li>#figma</li>
-          </ul>
-        </div>
-        <div class="project-img">
-          <div class="project-img-wrapper">
-            <a href="https://www.createios.in/" target="_blank">
-              <img src="/images/eazygrad.webp" alt="project image" draggable="false" />
-            </a>
-
-            <a href="https://www.createios.in/" target="_blank">
-              <span class="visit-site">Track My Expense
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="feather feather-external-link">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </span>
-            </a>
-          </div>
-        </div>
-        <a class="circle-dot" title="project idea" href="https://www.createios.in/" target="_blank"></a>
-        <div class="circle-extension"></div>
-      </div>
-      <div class="project project6">
-        <div class="project-img">
-          <div class="project-img-wrapper">
-            <a href="" target="_blank">
-              <img src="/images/eazygrad.webp" alt="project image" draggable="false" />
-            </a>
-            <a href="" target="_blank" title="To my works">
-              <span class="visit-site">Currency Converter
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="feather feather-external-link">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="project-details">
-          <h3>Currency Converter</h3>
-          <span>(Productivity Tool)</span>
-          <p>
-            I made this app when I started learning React. This app use an
-            external API to fetch live currency rates. An appealing currency
-            converter with a beautiful UI.
-          </p>
-
-          <ul>
-            <li>#react.js</li>
-            <li>#javascript</li>
-            <li>#jsx</li>
-            <li>#css</li>
-            <li>#ajax</li>
-            <li>#fetchAPI</li>
-            <li>#figma</li>
-          </ul>
-        </div>
-        <a class="circle-dot" href="https://currency-converter-by-anurag.netlify.app/" target="_blank"></a>
-        <div class="circle-extension"></div>
-      </div>
-
-      <div class="vertical-line"></div>
+      
+            <div class="vertical-line"></div>
     </section>
 
     <section class="testimonial-section">
@@ -435,7 +236,7 @@
           <div class="swiper-slide">
             <div class="swiper-card">
               <div class="testimonial-image">
-                <img src="/images/moon.png" alt="testimonial 3" />
+                <img src="images/moon.png" alt="testimonial 3" />
               </div>
               <div class="testimonial-text">
                 <p>
@@ -454,7 +255,7 @@
           <div class="swiper-slide">
             <div class="swiper-card">
               <div class="testimonial-image">
-                <img src="/images/moon.png" alt="testimonial 1" />
+                <img src="images/moon.png" alt="testimonial 1" />
               </div>
               <div class="testimonial-text">
                 <p>
@@ -472,7 +273,7 @@
           <div class="swiper-slide">
             <div class="swiper-card">
               <div class="testimonial-image">
-                <img src="/images/moon.png" alt="testimonial 2" />
+                <img src="images/moon.png" alt="testimonial 2" />
               </div>
               <div class="testimonial-text">
                 <p>
@@ -488,7 +289,7 @@
           <div class="swiper-slide">
             <div class="swiper-card">
               <div class="testimonial-image">
-                <img src="/images/moon.png" alt="testimonial 3" />
+                <img src="images/moon.png" alt="testimonial 3" />
               </div>
               <div class="testimonial-text">
                 <p>
@@ -512,7 +313,7 @@
       <h2>Let's connect</h2>
       <div class="contact-form">
         <div class="contact-img">
-          <img src="./images/contact-me.svg" alt="constact image" draggable="false" />
+          <img src="images/contact-me.svg" alt="constact image" draggable="false" />
         </div>
         <!-- class label1 ,label2,label3 added to form labels -->
         <form class='contact'  action="https://formspree.io/f/meoqorvw" method="post" name='contact'><input type='hidden' name='form-name' value='contact' />
@@ -606,7 +407,10 @@
 
     <script src="./matter.js"></script>
     <script src="./script.js"></script>
+    <script src="./floating-button.js"></script>
 
-  </body>
+<!-- Floating Button -->
+<a href="#" class="floating-button" id="scrollToTopBtn">&#8679;</a>
+</body>
 
 </html>
