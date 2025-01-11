@@ -255,7 +255,173 @@
             <div class="swiper-card">
               <div class="testimonial-image">
                 <img src="images/ss.jpeg.jpg" alt="testimonial 1" />
+              </div>Since there is no selected code, I will provide a general improvement to the HTML structure and code quality. Here's a modified version of the HTML code:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="floating-button.css" />
+  <link rel="icon" href="images/name-logo-white.svg" type="image/gif" sizes="16x16" />
+  <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <title>Mohamed Jahith</title>
+</head>
+<body id="body-container">
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="/">
+          <img src="images/name-logo-white.svg" alt="logo" />
+        </a>
+      </div>
+      <div class="nav-links">
+        <div class="theme-controls">
+          <div class="theme-buttons">
+            <button class="theme-btn light" title="Light Theme">
+              <i class="fas fa-sun"></i>
+            </button>
+            <button class="theme-btn dark" title="Dark Theme">
+              <i class="fas fa-moon"></i>
+            </button>
+            <button class="theme-btn system" title="System Theme">
+              <i class="fas fa-desktop"></i>
+            </button>
+          </div>
+          <div class="theme-toggler">
+            <img src="images/moon.png" alt="Theme toggle" id="icon">
+          </div>
+        </div>
+        <div class="phone-icon" style="display:none">
+          <a href="https://topmate.io/anuragsingh" target="_blank"><img src="./images/phone.svg" alt="phone icon" draggable="false" /></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="main-section">
+      <div class="hero-section">
+        <div class="hero-section-text">
+          <div class="hero-content">
+            <h1>Jahith.JM</h1>
+            <p>Web Developer</p>
+            <div class="about-me-btn">
+              <span class="about-me-text">About Me</span>
+              <div class="right-arrow">
+                <img src="./images/right-arrow.svg" alt="right-arrow" draggable="false" />
               </div>
+            </div>
+          </div>
+          <div class="name-logo">
+            <img src="images/name-logo.svg" alt="name logo" />
+          </div>
+        </div>
+        <div class="about-section">
+          <div class="x-icon">
+            <img src="images/x.svg" alt="x icon" draggable="false" />
+          </div>
+          <div class="about-me">
+            <div class="about-me-text">
+              <h2 class="about-me-title">ABOUT ME</h2>
+              <p class="about-me-detail">
+                I help business owners and busy web developers to design & 
+                develop creative websites that fits their vision and attracts
+                the visitors to stay for ever. Technologies and tools that I use
+                to create such awesome websites.
+              </p>
+              <ul class="about-me-detail">
+                <li>#javascript</li>
+                <li>#angular</li>
+                <li>#laravel</li>
+                <li>#php</li>
+                <li>#node.js</li>
+                <li>#express.js</li>
+                <li>#mysql</li>                               
+                <li>#html</li>
+                <li>#css</li>
+                <li>#sass</li>
+                <li>#bootstrap</li>
+                <li>#tailwind</li>
+                <li>#git</li>
+                <li>#github</li>
+                <li>#java</li>
+                <li>C#</li>
+                <li>#python</li>
+                <li>#terminal</li>
+                <li>#adobeXD</li>
+                <li>#figma</li>
+              </ul>
+            </div>
+          </div>
+          <div class="illustration">
+            <div class="coder-img-container">
+              <img class="coder-img" src="images/coder.svg" alt="coder image" draggable="false" />
+            </div>
+          </div>
+        </div>
+        <ul class="social-links">
+          <li class="linkedin-icon">
+            <a href="https://www.linkedin.com/in/mohamed-jahith-abb496250?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank"><i
+                class="fab fa-linkedin-in"></i></a>
+          </li>
+          <li class="instagram-icon">
+            <a href="https://www.instagram.com/mr_jm_jahith/profilecard/?igsh=bzVuYmhiZjAyd2p0" target="_blank"><i class="fab fa-instagram"></i></a>
+          </li>
+          <li class="gmail-icon">
+            <a href="mailto:jahith418@gmail.com" target="_blank"><i class="far fa-envelope"></i></a>
+          </li>
+          <li class="github-icon">
+            <a href="https://github.com/jahithjm" target="_blank"><i class="fab fa-github"></i></a>
+          </li>
+        </ul>
+        <div class="latest-works-link">Latest Works</div>
+        <img class="down-arrow" title="To my works" src="images/right-arrow.svg" alt="down arrow" />
+        <div class="latest-works-arrow" ></div>
+      </div>
+      <div id="wrapper-canvas"></div>
+      <div class="overlay"></div>
+      <div class="overlay2"></div>
+    </section>
+    <section class="work-section">
+      <h2>My Works</h2>
+      <div class="project project0">
+        <div class="project-img">
+          <div class="project-img-wrapper">
+            <img src="images/photo1.png" alt="project image" draggable="false" />
+            <a href="https://github.com/jahithjm/House-Rental-Plaform.git" target="_blank">
+              <span class="visit-site">EHRS
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-external-link">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="project-details">
+          <h3>EASY HOUSE RENTAL PLATFORM</h3>
+          <span>(RENTAL SERVICE)</span>
+          <p>
+            A modern, responsive platform for property rentals. It features searchable listings with filters, booking calendars, and detailed property details. Tenants can explore and contact landlords easily. Landlords can manage properties and track bookings seamlessly.
+          </p>
+          <ul>
+            <li>#html</li>
+            <li>#css</li>
+            <li>#javaScript</li>
+            <li>#php</li>
+            <li>#mysql</li>
+            <li>#figma (for UI/UX)</li>
+          </ul>
+        </div> 
+        <a class="circle-dot" href="https://github.com/jahithjm/H
               <div class="testimonial-text">
                 <p>
                   Jahith was a wonderful developer to work with! He anticipated
